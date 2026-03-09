@@ -1,6 +1,6 @@
 [package]
 name = "pal-edit"
-version = "2.0.2"
+version = "2.0.3"
 edition = "2024"
 authors = ["thscharler <thscharler@gmail.com>"]
 description = "edit and preview for rat-theme4 color palettes."
@@ -38,8 +38,8 @@ ratatui-crossterm = { version = "0.1" }
 
 rat-salsa = { version = "4.0", features = ["dialog_widgets"], optional = true }
 rat-salsa-wgpu = { version = "0.10", git = "https://github.com/thscharler/rat-salsa-wgpu", features = ["fallback_symbol_font", "fallback_emoji_font"], optional = true }
-rat-widget = { version = "3.0", features = ["user_directories"] }
-rat-widget-extra = { version = "2.0", features = ["color-input"] }
+rat-widget = { version = "3.2", features = ["user_directories"] }
+rat-widget-extra = { version = "2.1", features = ["color-input"] }
 rat-theme4 = { version = "4", features = ["serde", "color-input"] }
 
 [[bin]]
