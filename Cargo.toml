@@ -11,8 +11,11 @@ keywords = ["ratatui", "themes", "color"]
 categories = ["command-line-interface"]
 exclude = [".idea/*", ".gitignore"]
 
-[lints]
-workspace = true
+[lints.clippy]
+collapsible_else_if = "allow"
+collapsible_if = "allow"
+if_same_then_else = "allow"
+comparison_chain = "allow"
 
 [features]
 default = ["term"]
