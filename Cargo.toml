@@ -26,7 +26,7 @@ term = ["dep:rat-salsa"]
 [dependencies]
 anyhow = "1.0"
 cli-clipboard = "0.4"
-dirs = "6.0"
+dirs = "7.0"
 fern = "0.7"
 indexmap = "2.12"
 log = "0.4"
