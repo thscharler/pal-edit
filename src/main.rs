@@ -90,8 +90,9 @@ fn main() -> Result<(), Error> {
         #[cfg(all(feature = "wgpu", not(feature = "term")))]
         RunConfig::new(ConvertCrossterm::new())?
             .window_title("paledit")
-            .font_family("FiraCode Nerd Font Mono")
-            .font_size(22.)
+            // .font_family("FiraCode Nerd Font Mono")
+            .font_family("Courier Prime")
+            .font_size(22)
             .poll(PollBlink::default())
             .poll(PollRendered),
         #[cfg(feature = "term")]
