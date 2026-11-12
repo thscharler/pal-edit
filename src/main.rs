@@ -31,9 +31,9 @@ use rat_salsa::{Control, RunConfig, SalsaAppContext, SalsaContext, run_tui};
 #[cfg(feature = "wgpu")]
 use rat_salsa_wgpu::event::WindowEvent;
 #[cfg(feature = "wgpu")]
-use rat_salsa_wgpu::events::WindowEventState;
+use rat_salsa_wgpu::event::WindowEventState;
 #[cfg(feature = "wgpu")]
-use rat_salsa_wgpu::events::winit_to_crossterm_event;
+use rat_salsa_wgpu::event::winit_to_crossterm_event;
 #[cfg(feature = "wgpu")]
 use rat_salsa_wgpu::poll::PollBlink;
 use rat_theme4::palette::{ColorIdx, Colors};
