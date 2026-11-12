@@ -29,7 +29,7 @@ use rat_salsa::poll::PollCrossterm;
 use rat_salsa::poll::PollRendered;
 use rat_salsa::{Control, RunConfig, SalsaAppContext, SalsaContext, run_tui};
 #[cfg(feature = "wgpu")]
-use rat_salsa_wgpu::events::WindowEvent;
+use rat_salsa_wgpu::event::WindowEvent;
 #[cfg(feature = "wgpu")]
 use rat_salsa_wgpu::events::WindowEventState;
 #[cfg(feature = "wgpu")]
