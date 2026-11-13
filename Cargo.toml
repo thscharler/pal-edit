@@ -19,8 +19,8 @@ comparison_chain = "allow"
 
 [features]
 default = []
-wgpu = ["dep:rat-salsa-wgpu"]
-term = ["dep:rat-salsa"]
+wgpu = ["rat-salsa-switch/wgpu"]
+term = ["rat-salsa-switch/term"]
 
 [dependencies]
 anyhow = "1.0"
@@ -39,9 +39,7 @@ ratatui-core = { version = "0.1", features = ["std", "layout-cache"] }
 ratatui-widgets = { version = "0.3", features = ["std", "unstable-rendered-line-info"] }
 ratatui-crossterm = { version = "0.1" }
 
-rat-salsa = { version = "4.0", features = ["dialog_widgets"], optional = true }
-rat-salsa-wgpu = { version = "0.10", path = "../rat-salsa-wgpu", features = ["fallback_symbol_font", "fallback_emoji_font"], optional = true }
-#rat-salsa-wgpu = { version = "0.10", git = "https://github.com/thscharler/rat-salsa-wgpu", features = ["fallback_symbol_font", "fallback_emoji_font"], optional = true }
+rat-salsa-switch = { version = "0.1", path = "../rat-salsa-switch", features = ["dialog", "dialog_widgets"], optional = true }
 rat-widget = { version = "3.2", features = ["user_directories"] }
 rat-widget-extra = { version = "2.1", features = ["color-input"] }
 rat-theme4 = { version = "4", features = ["serde", "color-input"] }
