@@ -6,7 +6,10 @@ mod sample_or_base46;
 mod util;
 mod widget;
 
-pub(crate) use rat_salsa_switch as rat_salsa;
+#[cfg(feature = "term")]
+pub(crate) use rat_salsa;
+#[cfg(feature = "wgpu")]
+pub(crate) use rat_salsa_wgpu as rat_salsa;
 
 use crate::palette_edit::PaletteEdit;
 use crate::sample_or_base46::ShowOrBase46;
@@ -21,10 +24,6 @@ use rat_salsa::dialog_stack::file_dialog::{
 };
 use rat_salsa::dialog_stack::msgdialog::msg_dialog_event;
 use rat_salsa::event::RenderedEvent;
-#[cfg(feature = "term")]
-use rat_salsa::poll::PollCrossterm;
-use rat_salsa::poll::PollRendered;
-use rat_salsa::{Control, RunConfig, SalsaAppContext, SalsaContext, run_tui};
 #[cfg(feature = "wgpu")]
 use rat_salsa::event::WindowEvent;
 #[cfg(feature = "wgpu")]
@@ -33,6 +32,10 @@ use rat_salsa::event::WindowEventState;
 use rat_salsa::event::winit_to_crossterm_event;
 #[cfg(feature = "wgpu")]
 use rat_salsa::poll::PollBlink;
+#[cfg(feature = "term")]
+use rat_salsa::poll::PollCrossterm;
+use rat_salsa::poll::PollRendered;
+use rat_salsa::{Control, RunConfig, SalsaAppContext, SalsaContext, run_tui};
 use rat_theme4::palette::{ColorIdx, Colors};
 use rat_theme4::theme::SalsaTheme;
 use rat_theme4::themes::create_fallback;
