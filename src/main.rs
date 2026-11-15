@@ -30,8 +30,6 @@ use rat_salsa::event::WindowEvent;
 use rat_salsa::event::WindowEventState;
 #[cfg(feature = "wgpu")]
 use rat_salsa::event::winit_to_crossterm_event;
-#[cfg(feature = "wgpu")]
-use rat_salsa::poll::PollBlink;
 #[cfg(feature = "term")]
 use rat_salsa::poll::PollCrossterm;
 use rat_salsa::poll::PollRendered;
@@ -97,7 +95,6 @@ fn main() -> Result<(), Error> {
             // .font_family("FiraCode Nerd Font Mono")
             .font_family("Courier Prime")
             .font_size(22)
-            .poll(PollBlink::default())
             .poll(PollRendered),
         #[cfg(feature = "term")]
         RunConfig::default()?.poll(PollCrossterm).poll(PollRendered),
